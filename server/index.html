@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinCare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors: {
+                  
+ 'text': {
+
+   50: '#f7f0ed',
+   100: '#f0e0db',
+   200: '#e0c2b8',
+   300: '#d1a394',
+   400: '#c28570',
+   500: '#b3664d',
+   600: '#8f523d',
+   700: '#6b3d2e',
+   800: '#47291f',
+   900: '#24140f',
+   950: '#120a08',
+ },
+ 'background': {
+   50: '#f7eded',
+   100: '#f0dbdb',
+   200: '#e0b8b8',
+   300: '#d19494',
+   400: '#c27070',
+   500: '#b34d4d',
+   600: '#8f3d3d',
+   700: '#6b2e2e',
+   800: '#471f1f',
+   900: '#240f0f',
+   950: '#120808',
+ },
+ 'primary': {
+   50: '#f8efec',
+   100: '#f1deda',
+   200: '#e3bdb5',
+   300: '#d69c8f',
+   400: '#c87b6a',
+   500: '#ba5a45',
+   600: '#954837',
+   700: '#703629',
+   800: '#4a241c',
+   900: '#25120e',
+   950: '#130907',
+ },
+ 'secondary': {
+   50: '#f8f5ed',
+   100: '#f1eada',
+   200: '#e3d5b5',
+   300: '#d5c090',
+   400: '#c7ab6b',
+   500: '#b99646',
+   600: '#947838',
+   700: '#6f5a2a',
+   800: '#4a3c1c',
+   900: '#251e0e',
+   950: '#120f07',
+ },
+ 'accent': {
+   50: '#f8f8ed',
+   100: '#f1f1da',
+   200: '#e3e3b5',
+   300: '#d5d590',
+   400: '#c7c76b',
+   500: '#b9b946',
+   600: '#949438',
+   700: '#6f6f2a',
+   800: '#4a4a1c',
+   900: '#25250e',
+   950: '#121207',
+ },
+},
+
+            }
+          }
+        }
+      </script>
+</head>
+<body class="flex flex-col bg-background-50 justify-center">
+    <!-- Navbar -->
+    <div class="bg-background-800 flex flex-wrap flex-row w-full p-3 gap-10 items-center shadow-[0px_2px_5px_rgba(0,0,0,0.3)] shadow-dark mb-5">
+        <a href="index.html" class="text-3xl font-bold">SkinCare</a>
+        <a href="index.html" class="text-white mr-4" id="home-link">Főoldal</a>
+        <a href="#">Krémek</a>
+        <a href="#">Márkák</a>
+        <a href="#">Összetevők</a>
+        <a href="#">Fórum</a>
+        <a href="#">Blog</a>
+        <div class="flex items-center space-x-4 ml-auto">
+          <button id="login-btn" class="bg-cream text-brown px-4 py-2 rounded-full shadow-md hover:bg-cream-dark transition duration-300" target="_blank">Bejelentkezés</button>
+          <button id="register-btn" class="bg-cream-500 text-brown px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">Regisztráció</button>
+          
+          <!-- Keresés -->
+          <div class="ml-4 flex-shrink-0">
+            <div class="relative">
+              <input type="text" class="bg-gray-900 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Keresés...">
+              <button class="absolute inset-y-0 right-0 flex items-center px-4 bg-brown-500 text-white rounded-r-md hover:bg-brown-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800">
+                Keresés
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+    </div>
+    
+
+    <!-- Tartalom -->
+    <div class="container mx-auto p-4">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Üdvözöljük a Skincare oldalon!</h1>
+        <p class="text-lg text-gray-600 leading-relaxed mb-4">A Skincare oldal célja, hogy segítsen Önnek megtalálni a legjobb bőrápolási termékeket és tanácsokat adni a bőrének ápolásához.</p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-4">Fedezze fel széles körű termékpalettánkat, amely tartalmaz arcápolási, testápolási és sok más terméket, hogy bőre mindig egészséges és sugárzó legyen!</p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-4">Kövesse oldalunkat, hogy mindig naprakész legyen a legújabb trendekkel és a bőrápolási szakértők legfrissebb tanácsaival.</p>
+      </div>
+    </div>
+    
+    <!-- Gombok -->
+    <div class="flex justify-center">
+      <button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Arcápolás</button>
+      <a href="kremek.html" ><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Testápolás</button> </a>
+      <a href="kremek.html"><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Smink</button></a>
+
+
+   <!--Oldalak-->
+    <script>
+      document.getElementById("login-btn").addEventListener("click", function() {
+        window.location.href = "bejelentkezes.html";
+      });
+  
+      document.getElementById("register-btn").addEventListener("click", function() {
+        window.location.href = "regisztracio.html";
+      });
+      document.getElementById("home-link").addEventListener("click", function() {
+        window.location.href = "index.html";
+      });
+    </script>
+</body>
+</html>
