@@ -86,9 +86,9 @@
 </head>
 <body class="flex flex-col bg-background-50 justify-center">
     <!-- Navbar -->
-    <div class="bg-background-800 flex flex-wrap flex-row w-full p-3 gap-10 items-center shadow-[0px_2px_5px_rgba(0,0,0,0.3)] shadow-dark mb-5">
-        <a href="index.html" class="text-3xl font-bold">SkinCare</a>
-        <a href="index.html" class="text-white mr-4" id="home-link">Főoldal</a>
+    <div class="bg-background-800 flex flex-wrap flex-row w-full p-3 gap-10 items-center shadow-[0px_2px_5px_rgba(0,0,0,0.3)] shadow-dark mb-0">
+        <a href="index.html" class="text-3xl font-bold text-white">SkinCare</a>
+        <a href="index.html" class="text-black mr-4 font-bold" id="home-link">Főoldal</a>
         <a href="#">Krémek</a>
         <a href="#">Márkák</a>
         <a href="#">Összetevők</a>
@@ -114,20 +114,24 @@
     
 
     <!-- Tartalom -->
-    <div class="container mx-auto p-4">
-      <div class="max-w-2xl mx-auto">
-        <h1 class="text-3xl font-bold text-gray-800 mb-4">Üdvözöljük a Skincare oldalon!</h1>
-        <p class="text-lg text-gray-600 leading-relaxed mb-4">A Skincare oldal célja, hogy segítsen Önnek megtalálni a legjobb bőrápolási termékeket és tanácsokat adni a bőrének ápolásához.</p>
-        <p class="text-lg text-gray-600 leading-relaxed mb-4">Fedezze fel széles körű termékpalettánkat, amely tartalmaz arcápolási, testápolási és sok más terméket, hogy bőre mindig egészséges és sugárzó legyen!</p>
-        <p class="text-lg text-gray-600 leading-relaxed mb-4">Kövesse oldalunkat, hogy mindig naprakész legyen a legújabb trendekkel és a bőrápolási szakértők legfrissebb tanácsaival.</p>
+    <div class="relative bg-cover bg-center h-screen" style="background-image: url('../img/elokep.jpg');">
+      <div class="container mx-auto p-4 pt-24 relative z-10">
+        <div class="max-w-2xl mx-auto bg-white bg-opacity-75 p-8 rounded-lg shadow-lg">
+          <h1 class="text-3xl font-bold text-gray-800 mb-4">Üdvözöljük a Skincare oldalon!</h1>
+          <p class="text-lg text-gray-600 leading-relaxed mb-4">A Skincare oldal célja, hogy segítsen Önnek megtalálni a legjobb bőrápolási termékeket és tanácsokat adni a bőrének ápolásához.</p>
+          <p class="text-lg text-gray-600 leading-relaxed mb-4">Fedezze fel széles körű termékpalettánkat, amely tartalmaz arcápolási, testápolási és sok más terméket, hogy bőre mindig egészséges és sugárzó legyen!</p>
+          <p class="text-lg text-gray-600 leading-relaxed mb-4">Kövesse oldalunkat, hogy mindig naprakész legyen a legújabb trendekkel és a bőrápolási szakértők legfrissebb tanácsaival.</p>
+      <p class="text-lg font-semibold text-center mb-4">Milyen témában vagy érdekelt?</p>
+      
+      <!-- Gombok -->
+          <div class="flex justify-center">
+            <button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Arcápolás</button>
+            <a href="kremek.html" ><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Testápolás</button> </a>
+            <a href="kremek.html"><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Smink</button></a>
+        </div>
       </div>
     </div>
-    
-    <!-- Gombok -->
-    <div class="flex justify-center">
-      <button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Arcápolás</button>
-      <a href="kremek.html" ><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Testápolás</button> </a>
-      <a href="kremek.html"><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Smink</button></a>
+    </div>
 
 
    <!--Oldalak-->

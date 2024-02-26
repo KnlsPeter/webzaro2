@@ -84,34 +84,38 @@
         }
       </script>
 </head>
-<body class="flex flex-col bg-background-50 justify-center">
+<body class="flex flex-col bg-background-800 justify-center">
     <!-- Navbar -->
-    <div class="bg-background-800 flex flex-wrap flex-row w-full p-3 gap-10 items-center shadow-[0px_2px_5px_rgba(0,0,0,0.3)] shadow-dark mb-5">
-        <a href="index.html" class="text-3xl font-bold">SkinCare</a>
-        <a href="index.html" class="text-white mr-4" id="home-link">Főoldal</a>
+    <div class="bg-background-800 flex flex-wrap flex-row w-full p-3 gap-10 items-center shadow-[0px_2px_5px_rgba(0,0,0,0.3)] shadow-dark mb-0">
+        <a href="index.html" class="text-3xl font-bold text-white">SkinCare</a>
+        <a href="index.html" class="text-black mr-4 font-bold" id="home-link">Főoldal</a>
         <a href="#">Krémek</a>
         <a href="#">Márkák</a>
         <a href="#">Összetevők</a>
         <a href="#">Fórum</a>
         <a href="#">Blog</a>
         <div class="flex items-center space-x-4 ml-auto">
-            <button id="login-btn" class="bg-cream text-brown px-4 py-2 rounded-full shadow-md hover:bg-cream-dark transition duration-300">Bejelentkezés</button>
-            <button id="register-btn" class="bg-cream-500 text-brown px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">Regisztráció</button>
+          <button id="login-btn" class="bg-cream text-brown px-4 py-2 rounded-full shadow-md hover:bg-cream-dark transition duration-300" target="_blank">Bejelentkezés</button>
+          <button id="register-btn" class="bg-cream-500 text-brown px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">Regisztráció</button>
           </div>
-
     </div>
 
     <!-- Login -->
-    <div class="center">
-      <div class="flex gap-5 flex-col border-solid rounded-xl border-2 border-brown-900 m-3 p-3 w-96 bg-brown-200">
-        <p class="text-3xl self-center font-bold text-brown-900">Belépés</p>
-        <input type="text" class="border-solid rounded-xl border-2 border-brown-900 w-full text-black rounded-md p-2 bg-brown-100" placeholder="email-cím" name="" id="">
-        <input type="password" class="border-solid rounded-xl border-2 border-brown-900 w-full text-black rounded-md p-2 bg-brown-100" placeholder="jelszó" name="" id="">
-        <div class="self-center text-center">
-          <button class="bg-background-80 px-4 py-2 rounded-md bg-brown-900 text-brown-100 hover:bg-brown-800">Belépés</button>
-        </div>
-      </div>
+    <div class="flex justify-center items-center h-screen">
+  <div class="flex flex-col rounded-lg border-2 border-brown-600 m-3 p-6 w-96 relative" style="background-image: url('háttérkép.jpg');">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-white"></div>
+    <p class="text-3xl self-center font-bold text-brown-800">Belépés</p>
+    <input type="text" class="border-solid rounded-lg border-2 border-brown-600 w-full text-brown-800 rounded-md p-3 bg-transparent mb-3" placeholder="Email-cím" name="" id="">
+    <input type="password" class="border-solid rounded-lg border-2 border-brown-600 w-full text-brown-800 rounded-md p-3 bg-transparent mb-3" placeholder="Jelszó" name="" id="">
+    <div class="self-center text-center">
+      <button class="bg-brown-600 px-6 py-3 rounded-lg text-white hover:bg-brown-700">Belépés</button>
     </div>
+    <p class="text-sm text-brown-800 self-center mt-3">Ha még nincs fiókod, <a href="#" class="text-blue-500 underline">regisztrálj itt</a>.</p>
+  </div>
+</div>
+
+    
+    
     
     <script>
         document.getElementById("login-btn").addEventListener("click", function() {
