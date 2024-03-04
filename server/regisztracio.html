@@ -3,126 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkinCare</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-                colors: {
-                  
- 'text': {
-
-   50: '#f7f0ed',
-   100: '#f0e0db',
-   200: '#e0c2b8',
-   300: '#d1a394',
-   400: '#c28570',
-   500: '#b3664d',
-   600: '#8f523d',
-   700: '#6b3d2e',
-   800: '#47291f',
-   900: '#24140f',
-   950: '#120a08',
- },
- 'background': {
-   50: '#f7eded',
-   100: '#f0dbdb',
-   200: '#e0b8b8',
-   300: '#d19494',
-   400: '#c27070',
-   500: '#b34d4d',
-   600: '#8f3d3d',
-   700: '#6b2e2e',
-   800: '#471f1f',
-   900: '#240f0f',
-   950: '#120808',
- },
- 'primary': {
-   50: '#f8efec',
-   100: '#f1deda',
-   200: '#e3bdb5',
-   300: '#d69c8f',
-   400: '#c87b6a',
-   500: '#ba5a45',
-   600: '#954837',
-   700: '#703629',
-   800: '#4a241c',
-   900: '#25120e',
-   950: '#130907',
- },
- 'secondary': {
-   50: '#f8f5ed',
-   100: '#f1eada',
-   200: '#e3d5b5',
-   300: '#d5c090',
-   400: '#c7ab6b',
-   500: '#b99646',
-   600: '#947838',
-   700: '#6f5a2a',
-   800: '#4a3c1c',
-   900: '#251e0e',
-   950: '#120f07',
- },
- 'accent': {
-   50: '#f8f8ed',
-   100: '#f1f1da',
-   200: '#e3e3b5',
-   300: '#d5d590',
-   400: '#c7c76b',
-   500: '#b9b946',
-   600: '#949438',
-   700: '#6f6f2a',
-   800: '#4a4a1c',
-   900: '#25250e',
-   950: '#121207',
- },
-},
-
-            }
-          }
-        }
-      </script>
+    <title>SkinCare - Regisztráció</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="flex flex-col bg-background-50 justify-center">
-    <!-- Navbar -->
-    <div class="bg-background-800 flex flex-wrap flex-row w-full p-3 gap-10 items-center shadow-[0px_2px_5px_rgba(0,0,0,0.3)] shadow-dark mb-5">
-        <a href="index.html" class="text-3xl font-bold">SkinCare</a>
-        <a href="index.html" class="text-white mr-4" id="home-link">Főoldal</a>
-        <a href="#">Krémek</a>
-        <a href="#">Márkák</a>
-        <a href="#">Összetevők</a>
-        <a href="#">Fórum</a>
-        <a href="#">Blog</a>
-        <div class="flex items-center space-x-4 ml-auto">
-            <button id="login-btn" class="bg-cream text-brown px-4 py-2 rounded-full shadow-md hover:bg-cream-dark transition duration-300">Bejelentkezés</button>
-            <button id="register-btn" class="bg-cream-500 text-brown px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">Regisztráció</button>
-          </div>
-
+<body class="bg-gray-100">
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-full max-w-xs">
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                        Felhasználónév
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Felhasználónév">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        Email cím
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="példa@példa.com">
+                </div>
+                <div class="mb-2">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Jelszó
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="********">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">
+                        Jelszó megerősítése
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" type="password" placeholder="********">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-teal-500 hover:bg-teal-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="register-btn">
+                        Regisztráció
+                    </button>
+                    <a class="inline-block align-baseline font-bold text-sm text-teal-500 hover:text-teal-800" href="regisztracio.html">
+                        Elfelejtett jelszó?
+                    </a>
+                </div>
+            </form>
+            <p class="text-center text-gray-500 text-xs">
+                Már van fiókja? <a class="text-teal-500 hover:text-teal-800" href="bejelentkezes.html">Jelentkezzen be!</a>
+            </p>
+        </div>
     </div>
 
-    <!-- Register -->
-    <div class="center">
-        <div class="flex gap-5 flex-col border-solid rounded-xl border-2 border-brown-900 m-3 p-3 w-96 bg-brown-200">
-          <p class="text-3xl self-center font-bold text-brown-900">Regisztráció</p>
-          <input type="text" class="border-solid rounded-xl border-2 border-brown-900 w-full text-black rounded-md p-2 bg-brown-100" placeholder="Név" name="name" id="name">
-          <input type="email" class="border-solid rounded-xl border-2 border-brown-900 w-full text-black rounded-md p-2 bg-brown-100" placeholder="E-mail cím" name="email" id="email">
-          <input type="password" class="border-solid rounded-xl border-2 border-brown-900 w-full text-black rounded-md p-2 bg-brown-100" placeholder="Jelszó" name="password" id="password">
-          <input type="password" class="border-solid rounded-xl border-2 border-brown-900 w-full text-black rounded-md p-2 bg-brown-100" placeholder="Jelszó megerősítése" name="confirm_password" id="confirm_password">
-          <div class="self-center text-center">
-            <button class="px-4 py-2 rounded-md bg-brown-900 text-brown-100 hover:bg-brown-800">Regisztráció</button>
-          </div>
-        </div>
-      </div>
-
     <script>
-        document.getElementById("login-btn").addEventListener("click", function() {
-          window.location.href = "bejelentkezes.html";
-        });
-    
         document.getElementById("register-btn").addEventListener("click", function() {
-          window.location.href = "regisztracio.html";s
+          window.location.href = "regisztracio.html";
         });
-      </script>
+    </script>
 </body>
 </html>

@@ -1,151 +1,240 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkinCare</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-                colors: {
-                  
- 'text': {
 
-   50: '#f7f0ed',
-   100: '#f0e0db',
-   200: '#e0c2b8',
-   300: '#d1a394',
-   400: '#c28570',
-   500: '#b3664d',
-   600: '#8f523d',
-   700: '#6b3d2e',
-   800: '#47291f',
-   900: '#24140f',
-   950: '#120a08',
- },
- 'background': {
-   50: '#f7eded',
-   100: '#f0dbdb',
-   200: '#e0b8b8',
-   300: '#d19494',
-   400: '#c27070',
-   500: '#b34d4d',
-   600: '#8f3d3d',
-   700: '#6b2e2e',
-   800: '#471f1f',
-   900: '#240f0f',
-   950: '#120808',
- },
- 'primary': {
-   50: '#f8efec',
-   100: '#f1deda',
-   200: '#e3bdb5',
-   300: '#d69c8f',
-   400: '#c87b6a',
-   500: '#ba5a45',
-   600: '#954837',
-   700: '#703629',
-   800: '#4a241c',
-   900: '#25120e',
-   950: '#130907',
- },
- 'secondary': {
-   50: '#f8f5ed',
-   100: '#f1eada',
-   200: '#e3d5b5',
-   300: '#d5c090',
-   400: '#c7ab6b',
-   500: '#b99646',
-   600: '#947838',
-   700: '#6f5a2a',
-   800: '#4a3c1c',
-   900: '#251e0e',
-   950: '#120f07',
- },
- 'accent': {
-   50: '#f8f8ed',
-   100: '#f1f1da',
-   200: '#e3e3b5',
-   300: '#d5d590',
-   400: '#c7c76b',
-   500: '#b9b946',
-   600: '#949438',
-   700: '#6f6f2a',
-   800: '#4a4a1c',
-   900: '#25250e',
-   950: '#121207',
- },
-},
-
-            }
-          }
-        }
-      </script>
+    <title>SkinCare</title>
 </head>
-<body class="flex flex-col bg-background-50 justify-center">
+
+<body class="bg-white">
     <!-- Navbar -->
-    <div class="bg-background-800 flex flex-wrap flex-row w-full p-3 gap-10 items-center shadow-[0px_2px_5px_rgba(0,0,0,0.3)] shadow-dark mb-0">
-        <a href="index.html" class="text-3xl font-bold text-white">SkinCare</a>
-        <a href="index.html" class="text-black mr-4 font-bold" id="home-link">Főoldal</a>
-        <a href="#">Krémek</a>
-        <a href="#">Márkák</a>
-        <a href="#">Összetevők</a>
-        <a href="#">Fórum</a>
-        <a href="#">Blog</a>
-        <div class="flex items-center space-x-4 ml-auto">
-          <button id="login-btn" class="bg-cream text-brown px-4 py-2 rounded-full shadow-md hover:bg-cream-dark transition duration-300" target="_blank">Bejelentkezés</button>
-          <button id="register-btn" class="bg-cream-500 text-brown px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">Regisztráció</button>
-          
-          <!-- Keresés -->
-          <div class="ml-4 flex-shrink-0">
-            <div class="relative">
-              <input type="text" class="bg-gray-900 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Keresés...">
-              <button class="absolute inset-y-0 right-0 flex items-center px-4 bg-brown-500 text-white rounded-r-md hover:bg-brown-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800">
-                Keresés
-              </button>
+    <header class="bg-white sticky top-0 shadow">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="md:flex md:items-center md:gap-12">
+                    <a class="block text-teal-600" href="#">
+                        <div class="text-3xl font-bold">SkinCare</div>
+                    </a>
+                </div>
+
+                <div class="hidden md:block">
+                    <nav aria-label="Global">
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Rólunk </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Összetevők </a>
+                            </li>
+
+                            
+                            
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="sm:flex sm:gap-4">
+                        <a class="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow" href="bejelentkezes.html">
+                            Bejelentkezés
+                        </a>
+
+                        <div class="hidden sm:flex">
+                            <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600" href="regisztracio.html">
+                                Regisztráció
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="block md:hidden">
+                        <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+    </header>
+
+    <!-- Content -->
+    <section class="bg-cover bg-opacity-10"
+        style="background-image: url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex  lg:items-center">
+            <div class="mx-auto max-w-xl text-center">
+                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                    SkinCare
+                    <strong class="font-extrabold text-teal-700 sm:block"> Minden rólad szól </strong>
+                </h1>
+
+                <p class="mt-4 sm:text-xl/relaxed font-bold">
+                    Az egészséges bőr nem csak divat, hanem életmód is. Csatlakozz hozzánk az egészséges bőrápolás útján!
+                </p>
+
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a class="block w-full rounded bg-teal-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                        href="#">
+                        Kezdd el!
+                    </a>
+
+                    <a class="block w-full bg-teal-200 bg-opacity-70 rounded px-12 py-3 text-sm font-medium text-teal-600 shadow hover:text-teal-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+                        href="#">
+                        Tudj meg többet!
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
+
+    <!-- Container for demo purpose -->
+    <div class="container my-24 mx-auto px-6">
+        <!-- Section: Design Block -->
+        <section class="mb-32">
+            <div
+                class="block rounded-lg bg-teal-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                <div class="flex flex-wrap items-center">
+                    <div class="hidden shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                        <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Trendy Pants and Shoes"
+                            class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" />
+                    </div>
+                    <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                        <div class="px-6 py-12 md:px-12">
+                            <h2 class="mb-10 text-2xl font-bold">
+                                Mit tehetsz a szép, ápolt bőrért?
+                            </h2>
+
+                            <p class="mb-6 text-neutral-500 text-justify">            
+Ahhoz, hogy a bőrünk egészséges és ragyogó legyen, rendszeres ápolásra és odafigyelésre van szükség. A megfelelő bőrápolási rutin kialakítása és az egészséges életmód gyakorlása mind fontos lépések a szép, ápolt bőr elérésében.
+Először is, fontos megérteni, hogy a bőrünk egy dinamikus szerv, melynek állapota folyamatosan változik az életkortól, az évszakoktól, a környezeti tényezőktől és az életmódtól függően. Ezért fontos a személyre szabott bőrápolási rutin kialakítása, figyelembe véve az egyéni igényeket és körülményeket.
+                            </p>
+                            <p class="mb-6 text-neutral-500 text-justify">
+
+                            A megfelelő bőrápolási rutin alapját a tisztítás képezi. Fontos, hogy megfelelő tisztítószereket használjunk, melyek eltávolítják a szennyeződéseket, a sminket és az egyéb lerakódásokat anélkül, hogy kiszárítanák vagy irritálnák a bőrt. Az arctisztítást reggel és este is el kell végezni, hogy a bőrünk mindig friss és tiszta legyen.
+
+                            A hidratálás is kulcsfontosságú a bőr egészségének megőrzésében. Használjunk megfelelő hidratáló krémet vagy szérumot, amely segít megőrizni a bőr nedvességtartalmát és rugalmasságát. Fontos, hogy a hidratálót a bőrtípusunknak megfelelően válasszuk ki, hogy optimális eredményt érjünk el.
+
+                            Nem szabad elfelejteni a napvédelem fontosságát sem. A nap sugaraival való túlzott expozíció károsíthatja a bőrt, okozhat ráncokat, pigmentfoltokat és akár bőrrákot is. Mindig használjunk napvédő krémet, amely megfelelő védelmet nyújt a káros UV sugarak ellen, és rendszeresen alkalmazzuk, függetlenül attól, hogy mennyire erős a napsütés.
+                           
+                            Az egészséges életmód szintén fontos szerepet játszik a bőr szépségének megőrzésében. Egészséges táplálkozás, elegendő alvás, megfelelő hidratáltság és a stressz minimalizálása mind hozzájárulnak a bőrünk egészségéhez és ragyogásához.</p>
+
+                            <p class="mb-6 text-neutral-500 text-justify"> 
+                            Végül, ne feledjük, hogy a bőrápolás nemcsak fizikai, hanem mentális és érzelmi szempontból is fontos. A bőrápolási rutin lehet egy kis idő a mindennapi stressz elűzésére, egy lehetőség arra, hogy kikapcsoljunk és felfrissüljünk. Így a szép, ápolt bőr elérése nemcsak külső, hanem belső harmóniát is jelenthet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Design Block -->
     </div>
-    
+    <!-- Container for demo purpose -->
 
-    <!-- Tartalom -->
-    <div class="relative bg-cover bg-center h-screen" style="background-image: url('../img/elokep.jpg');">
-      <div class="container mx-auto p-4 pt-24 relative z-10">
-        <div class="max-w-2xl mx-auto bg-white bg-opacity-75 p-8 rounded-lg shadow-lg">
-          <h1 class="text-3xl font-bold text-gray-800 mb-4">Üdvözöljük a Skincare oldalon!</h1>
-          <p class="text-lg text-gray-600 leading-relaxed mb-4">A Skincare oldal célja, hogy segítsen Önnek megtalálni a legjobb bőrápolási termékeket és tanácsokat adni a bőrének ápolásához.</p>
-          <p class="text-lg text-gray-600 leading-relaxed mb-4">Fedezze fel széles körű termékpalettánkat, amely tartalmaz arcápolási, testápolási és sok más terméket, hogy bőre mindig egészséges és sugárzó legyen!</p>
-          <p class="text-lg text-gray-600 leading-relaxed mb-4">Kövesse oldalunkat, hogy mindig naprakész legyen a legújabb trendekkel és a bőrápolási szakértők legfrissebb tanácsaival.</p>
-      <p class="text-lg font-semibold text-center mb-4">Milyen témában vagy érdekelt?</p>
-      
-      <!-- Gombok -->
-          <div class="flex justify-center">
-            <button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Arcápolás</button>
-            <a href="kremek.html" ><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Testápolás</button> </a>
-            <a href="kremek.html"><button class="bg-background-500 hover:bg-brown-700 text-white font-bold py-2 px-4 rounded mr-4 mb-4">Smink</button></a>
+    <section class="bg-teal-900 text-white">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+            <div class="mx-auto max-w-lg text-center">
+                <h2 class="text-3xl font-bold sm:text-4xl">Fedezd fel a számodra a legmegfelelőbb ápolási rutint</h2>
+
+                <p class="mt-4 text-gray-300">
+                    
+                </p>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <a class="block rounded-xl bg-teal-800 border border-gray-500/20 p-8 shadow-xl transition hover:border-gray-500/70 hover:shadow-teal-500/10"
+                    href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+
+                    <h2 class="mt-4 text-xl font-bold text-white">Közösség által alkotott cikkek</h2>
+
+                    <p class="mt-1 text-sm text-gray-300">
+                    Ez az oldal a közösség által készített cikkeket tartalmazza, melyek széleskörű témákat ölelnek fel. Fedezd fel mások tapasztalatait, véleményeit és hasznos tanácsait a közösség által megosztott tartalmakban!
+                    </p>
+                </a>
+
+                <a class="block rounded-xl bg-teal-800 border border-gray-500/20 p-8 shadow-xl transition hover:border-gray-500/70 hover:shadow-teal-500/10"
+                    href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+
+                    <h2 class="mt-4 text-xl font-bold text-white">Oszd meg a saját ötleteidet</h2>
+
+                    <p class="mt-1 text-sm text-gray-300">
+                        Itt bátran kifejtheted a véleményed és megoszthatod gondolataidat másokkal. Kezdd el írni a saját cikkeidet, és csatlakozz a közösséghez a tapasztalatok és inspirációk megosztásában!
+                    </p>
+                </a>
+
+                <a class="block rounded-xl bg-teal-800 border border-gray-500/20 p-8 shadow-xl transition hover:border-gray-500/70 hover:shadow-teal-500/10"
+                    href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+
+                    <h2 class="mt-4 text-xl font-bold text-white">Összetevők</h2>
+
+                    <p class="mt-1 text-sm text-gray-300">
+                        Részletes információkat találsz az általunk használt összetevőkről. Ismerd meg, hogy milyen hatással vannak ezek az összetevők a bőrödre, és válassz tudatosan a szépségápolási termékek között!
+                    </p>
+                </a>
+
+
+
+
+            </div>
+
+
         </div>
-      </div>
-    </div>
-    </div>
+    </section>
 
+    <footer class="bg-gray-100">
+        <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="flex justify-center text-teal-600">
+                <div class="text-2xl font-bold">SkinCare</div>
+            </div>
 
-   <!--Oldalak-->
+            <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+                Minden jog fenntartva © 2024 | SkinCare
+            </p>
+
+            <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+                <li>
+                    <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Rólunk </a>
+                </li>
+
+                <li>
+                    <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Blog </a>
+                </li>
+
+                <li>
+                    <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Összetevők </a>
+                </li>
+
+                
+                
+            </ul>
+
+            
+        </div>
+    </footer>
+
     <script>
-      document.getElementById("login-btn").addEventListener("click", function() {
-        window.location.href = "bejelentkezes.html";
-      });
-  
-      document.getElementById("register-btn").addEventListener("click", function() {
-        window.location.href = "regisztracio.html";
-      });
-      document.getElementById("home-link").addEventListener("click", function() {
-        window.location.href = "index.html";
-      });
+        document.getElementById("login-btn").addEventListener("click", function() {
+          window.location.href = "bejelentkezes.html";
+        });
+    
+        document.getElementById("register-btn").addEventListener("click", function() {
+          window.location.href = "regisztracio.html";s
+        });
     </script>
 </body>
+
 </html>
