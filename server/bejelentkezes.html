@@ -4,47 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkinCare - Bejelentkezés</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-    <div class="flex justify-center items-center h-screen">
-        <div class="w-full max-w-xs">
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                        Felhasználónév
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Felhasználónév">
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                        Jelszó
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="********">
-                </div>
-                <div class="flex items-center justify-between">
-                    <button class="bg-teal-500 hover:bg-teal-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="login-btn">
-                        Bejelentkezés
-                    </button>
-                    <a class="inline-block align-baseline font-bold text-sm text-teal-500 hover:text-teal-800" href="#">
-                        Elfelejtett jelszó?
-                    </a>
-                </div>
-            </form>
-            <p class="text-center text-gray-500 text-xs">
-                Még nincs fiókja? <a class="text-teal-500 hover:text-teal-800" href="regisztracio.html">Regisztráljon!</a>
-            </p>
-        </div>
-    </div>
-
-    <script>
-        document.getElementById("login-btn").addEventListener("click", function() {
-          window.location.href = "bejelentkezes.html";
-        });
+    <script src="https://cdn.tailwindcss.com"></script>
     
-        document.getElementById("register-btn").addEventListener("click", function() {
-          window.location.href = "regisztracio.html";
-        });
-      </script>
+</head>
+
+
+<body font>
+    <body class="bg-white">
+
+        <!-- Example -->
+        <div class="flex min-h-screen">
+      
+          <!-- Container -->
+          <div class="flex flex-row w-full">
+      
+            <!-- Sidebar -->
+            <div class='hidden lg:flex flex-col justify-between bg-teal-200 text-teal-900 lg:p-8 xl:p-12 lg:max-w-sm xl:max-w-lg'>
+              <div class="flex items-center justify-start space-x-3">
+                <p class="font-extrabold text-3xl">SkinCare</p>
+              </div>
+              <div class='space-y-5'>
+                <h1 class="lg:text-3xl xl:text-5xl xl:leading-snug font-extrabold">Fedezd fel a bőrápolás végtelen világát</h1>
+                <p class="text-lg">Nincs még fiókod?</p>
+                <a href="regisztracio.html"
+                  class="inline-block flex-none px-4 py-3 rounded-lg font-medium bg-teal-900 text-white">Regisztrálj itt</a>
+              </div>
+              <p class="font-medium">© 2024 SkinCare</p>
+            </div>
+      
+            <!-- Login -->
+
+            <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div></div>
+
+            <div class="flex flex-1 flex-col items-center justify-center px-10 relative">
+              <div class="flex lg:hidden justify-between items-center w-full py-4">
+                <div class="flex items-center justify-start space-x-3">
+                    <p class="font-extrabold text-3xl text-teal-900">SkinCare</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="text-teal-800">Nincs fiókod?</span>
+                  <a href="regisztracio.html" class="underline font-medium text-[#070eff]">
+                    Regisztrálj
+                  </a>
+                </div>
+              </div>
+              <!-- Login box -->
+              <div class="flex flex-1 flex-col  justify-center space-y-5 max-w-md">
+                <div class="flex flex-col space-y-2 text-center">
+                  <h2 class="text-3xl md:text-4xl font-bold text-teal-900">Lépj be a fiókodba</h2>
+                  <p class="text-md md:text-xl text-teal-900">Fedezd fel a bőrápolás végtelen világát!</p>
+                </div>
+                <div class="flex flex-col max-w-md space-y-5">
+                  <input type="text" placeholder="Email"
+                    class="flex px-3 py-2 md:px-4 md:py-3 border-2 border-teal-600 rounded-lg font-medium placeholder:font-normal" />
+                    <input type="text" placeholder="Jelszó"
+                    class="flex px-3 py-2 md:px-4 md:py-3 border-2 border-teal-600 rounded-lg font-medium placeholder:font-normal" />
+                  <button class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 rounded-lg font-medium bg-teal-900 text-white">Bejelentkezés</button>
+                </div>
+              </div>
+      
+              
+      
+            </div>
+          </div>
 </body>
 </html>
