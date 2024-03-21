@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//print_r($_GET);
 ?>
 
 
@@ -18,34 +18,22 @@ session_start();
 
 <body>
     
-<?php
    
-    extract($_GET);
-    if ($prog != "login.php" && $prog != "register.php") {
-        include 'navbar.php';
-    }
-    ?>
-    </div>
-
-    <div>
-    <?php
+<?php
     extract($_GET);
     if (isset ($prog)) {
-        include $prog;
+         if ($prog != "login.php" && $prog != "register.php") {
+                include 'navbar.php';
+                include $prog;
+        }else
+                include $prog;
     } else {
+        include 'navbar.php';
         include 'fooldal.php';
         include 'footer.php';
     }
     ?>
     </div>
-  
-   <?php/*
-    
-    extract($_GET);
-    if ($prog != "login.php" && $prog != "register.php") {
-        include 'footer.php';
-    }*/
-    ?>
 
   
 </body>

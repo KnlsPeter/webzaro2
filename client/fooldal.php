@@ -28,7 +28,7 @@
 </div>
 
     <!-- Container for demo purpose -->
-    <div class="container my-24 mx-auto px-6">
+    <div class="container my-24 mx-auto px-6 ">
         <!-- Section: Design Block -->
         <section class="mb-32">
             <div
